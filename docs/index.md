@@ -152,3 +152,46 @@ except Exception as e:
  ![Figure 3.7](https://github.com/dhaines44/ITFnd100-Mod07/blob/master/docs/Figure3.7-Assignment07.png "Figure 3.7")
  
  Figure 3.7 - Exception Script With Built-In Errors, String Not Float Entered
+ 
+ ```
+ # --------------------------------------------------#
+# Title:  Assignement07 - Exceptions
+# Dev:  DHaines
+# Date:  Nov 19, 2019
+# ChangeLog:  (Who, When, What)
+#   DHaines, 11/19/2019, Created Script
+# --------------------------------------------------#
+# Data ----------------------------------------------------------------------------------#
+# Processing ----------------------------------------------------------------------------#
+# Presentation---------------------------------------------------------------------------#
+#try/except
+try:
+    num = float(input("Enter a number:  "))
+except ValueError as e:
+    print("Please do not type out a number, simply enter a numerical value.""\n")
+    print("Python Error Info:  ")
+    print(e, e.__doc__, type(e), sep="\n")
+except Exception as e:
+    print("What you entered wasn't a number!""\n")
+    print("Python Error Info: ")
+    print(e, e.__doc__, type(e), sep="\n")
+```
+    
+    Figure 3.8 - Exceptions Script With Selected Exception Type - ValueError
+    
+    ![Figure 3.9](https://github.com/dhaines44/ITFnd100-Mod07/blob/master/docs/Figure3.9-Assignment07.png "Figure 3.9")
+    
+    Figure 3.9 - Exception Script With Selected Exception Type, String Not Float Entered
+    
+    ![Figure 4.0](https://github.com/dhaines44/ITFnd100-Mod07/blob/master/docs/Figure4.0-Assignment07.png "Figure 4.0")
+    
+    Figure 4.0 - Exepception Script with Correct Input
+
+## Writing the Requested Python Program
+I first created a new sub folder for Assignment07 and opened up the PyCharm program.  Once the program was opened, I followed the steps that professor Root provided in the “Intro to Python Mod03” (https://www.youtube.com/watch?v=EoCXrbkdI0c&feature=youtu.be) (External Site) video, but made some minor modifications to create Assignement07.py file in my Assignment07 folder.  Once I had PyCharm up and ready to go, I utilized the “PythonMod7Project” (https://www.youtube.com/watch?v=4IkIdXJBC6o&feature=youtu.be) (External Site) video Professor Root provided, Python Programming for the Absolute Beginner book (Dawson M., Python Programming For The Absolute Beginner.  Course Technology, 2010), and various Python focused websites/ videos to complete the requested task of creating a new script that demonstrates how Pickling and Structured error handling work.    
+
+## Script Details
+As I wrote each function I would utilize the debugging tools available in PyCharm to ensure that my scripts functioned correctly as I moved through each function.  After I created all of the functions and placed them in the scripts, I was ready to run the Assignment07 Pickling and Exceptions scripts in PyCharm.  I right clicked and went to Run ‘Pickling’ which put it in an interactive window within PyCharm.  Here I could try out my script to make sure it functioned as intended.  Once I was happy with my script and my GroceryList.dat file was being written to as I desired (Figure 3.2), I ensured my file was saved so I could run it in Command Shell.  To run my script in Command Shell, I accessed the folder location on my computer, highlight the Pickling.py and Exceptions.py file selected the Python Open drop down, selected Python 3.7 and this launched my script in the Command Shell.  For some reason, my script would not run in Command Shell.  It would run perfectly fine in PyCharm without errors but would automatically close in Command Shell without prompting any inputs.  To see if there was something wrong with my code, I ran the file in IDLE python Shell where again the script function as intended.  
+
+## Summary
+Python has proven to be powerful, and user friendly programming language for creating interactive programs where you can access txt files, capture, display, save, and write user inputs.  Utilizing what we learned in Modules01, Modules02, Modules03, Modules04, Module 05, Modules 06 and expanding our knowledge base to include Pickling and Exceptions.  Going forward with the guidance of Professor Root and Author Dawson, I am confident that I will be able to continue to expand my Python programming capabilities and successfully write more complex scripts and programs.   
