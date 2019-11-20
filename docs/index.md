@@ -56,7 +56,59 @@ input("\n\n Press Enter Key to Exit.")
 ```
 Figure 3.0 - Pickling With "wb" Write Binary and "rb" Read Binary
 
+
 ![Figure 3.1](https://github.com/dhaines44/ITFnd100-Mod07/blob/master/docs/Figure3.1-Assignment07.png "Figure 3.1")
+
 Figure 3.1 - Pickling With "wb" Write Binary and "rb" Read Binary PyCharm Interactive Results
+
 ![Figure 3.2](https://github.com/dhaines44/ITFnd100-Mod07/blob/master/docs/Figure3.2-Assignment07.png "Figure 3.2")
+
 Figure 3.2 - Binary GroceryList.dat Notepad
+
+```
+# --------------------------------------------------#
+# Title:  Assignement07 - Pickling
+# Dev:  DHaines
+# Date:  Nov 19, 2019
+# ChangeLog:  (Who, When, What)
+#   DHaines, 11/19/2019, Created Script
+# --------------------------------------------------#
+
+import pickle # imports code from another file
+print("Grocery List\n") # print Grocery List so the User knows what they are looking at
+
+# Data ----------------------------------------------------------------------------------#
+strGL = "GroceryList.dat" #Grocery List dictionary
+lstItems = ["apples", "bananas", "avacados", "spinach", "broccoli", "carrots", "ground turkey", "chicken breast", "pasta", "eggs"]# Grocery List Items
+inItem = []
+nlstItems = []
+#Processing ----------------------------------------------------------------------------#
+gl = open("GroceryList.dat", "wb")# Write Grocery List data into GroceryList.dat
+pickle.dump(lstItems, gl) # pickle.dump() function, writes pickled version of object to file
+gl.close()
+
+gl = open("Grocerylist.dat", "ab")
+pickle.dump(nlstItems,gl)
+gl.close()
+
+gl = open("GroceryList.dat","rb") # gl = open("GroceryList.dat", "ab")
+lstItems = pickle.load(gl) # lstitems = [items]
+gl.close()
+
+# Presentation ----------------------------------------------------------------------------#
+inItem = (input("Enter an additional item to the Grocery List:  "))
+nlstItems = lstItems + [inItem]
+
+print(nlstItems) # Showing Grocery List
+gl.close()
+
+input("\n\n Press Enter Key to Exit.")
+```
+Figure 3.3 - Pickling With "ab" Append Binary and "rb" Read Binary
+
+![Figure 3.4](https://github.com/dhaines44/ITFnd100-Mod07/blob/master/docs/Figure3.4-Assignment07.png "Figure 3.4")
+
+Figure 3.4 - Pickling With "ab" Append Binary and "rb" Read Binary PyCharm Interactive Results
+
+##Exception/ Structured Error Handling
+Errors that are detected during script execution in Python are better known as exceptions.  Most exceptions or errors are discovered by individuals other than yourself trying to utilize your script or program.  Exceptions are identified on the last line of the error message and can be sometimes difficult for the user to understand if they are not familiar with the programming language.  To ensure that your program doesn’t end right away if the user doesn’t input the proper entry into your script, we utilize Python’s exception handling functionality (Dawson M., Python Programming For The Absolute Beginner. Course Technology, 2010).  Exception handling will commonly be performed utilizing a while loop and the use of a “try” statement with an “except” clause.  The try statement is first executed and if no exceptions occur, the “except” clause is skipped and the execution of the try statement is finished.  If an exception occurs during the execution of the try statement, the rest of the statement is skipped.  If the exception matches what is named after the “except” keyword, the except clause will be executed (Python Software Foundation. https://docs.python.org/3/tutorial/errors.html. Nov 2019)(External Site). An example of this can be seen below in figure 3.5.  If the user enters a number, the script will run and complete at the try function.  If the user enters a letter or sequence of letters, the except clause will execute and the script will tell the user “What you entered wasn’t a number!”
